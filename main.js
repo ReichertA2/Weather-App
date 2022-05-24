@@ -38,16 +38,15 @@ function handleSubmit(event){
 async function doAPICall(city){
     let result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${ApiKey}&units=imperial`)
     console.log(result)
-    // result=result.data.main.temp_min[0]
-    // console.log(result)
+    
     let header = document.getElementsByTagName('h4')[0];
     header.innerText=result.data.name;
 
     let high = document.getElementsByClassName("card-title1")[0];
-    high.innerText=result.data.main.temp_max;
+    high.innerText=Math.round(result.data.main.temp_max);
 
     let low = document.getElementsByClassName("card-title2")[0];
-    low.innerText=result.data.main.temp_min;
+    low.innerText=Math.round(result.data.main.temp_min);
 
 
 
@@ -57,65 +56,7 @@ async function doAPICall(city){
     let humidity = document.getElementsByClassName("card-title4")[0];
     humidity.innerText=result.data.main.humidity;
 
-    
 
-
-    // let tbody=document.getElementsByTagName('tbody')[0];
-    // let tr=document.createElement('tr');
-    // tbody.appendChild(tr);
-    // let th=document.createElement('th');
-    // th.scope="row";
-    // th.innerText=result.data.name;
-    // tr.appendChild(th);
-
-
-
-
-
-   
-
+}
 
     
-
-    
-        // let tr=document.createElement('tr')
-        // tbody.appendChild(tr)
-        // let th=document.createElement('th');
-        // th.scope="row";
-        // th.innerText=racer.Driver.givenName;
-        // tr.appendChild(th);
-
-
-
-
-        // td=document.createElement('td');
-        // td.innerText=racer.Driver.familyName;
-        // tr.appendChild(td);
-
-        // td=document.createElement('td');
-        // td.innerText=racer.position;
-        // tr.appendChild(td);
-
-        // td=document.createElement('td');
-        // td.innerText=racer.wins;
-        // tr.appendChild(td);
-
-        // td=document.createElement('td');
-        // td.innerText=racer.Driver.dateOfBirth;
-        // tr.appendChild(td);
-
-        // td=document.createElement('td');
-        // td.innerText=racer.Driver.nationality;
-        // tr.appendChild(td);
-
-        // td=document.createElement('td');
-        // td.innerText=racer.Constructors[0].name;
-        // tr.appendChild(td);
-    
-}  
-
-
-
-
-    
- 

@@ -41,12 +41,15 @@ async function doAPICall(city){
     
     let header = document.getElementsByTagName('h4')[0];
     header.innerText=result.data.name;
+ 
+   
 
     let high = document.getElementsByClassName("card-title1")[0];
-    high.innerText=Math.round(result.data.main.temp_max);
+    high.innerText=Math.round(result.data.main.temp_max) + '\u00B0F' ;
+    
 
     let low = document.getElementsByClassName("card-title2")[0];
-    low.innerText=Math.round(result.data.main.temp_min);
+    low.innerText=Math.round(result.data.main.temp_min) + '\u00B0F';
 
 
 
@@ -54,7 +57,7 @@ async function doAPICall(city){
     forecast.innerText=result.data.weather[0].description;
 
     let humidity = document.getElementsByClassName("card-title4")[0];
-    humidity.innerText=result.data.main.humidity;
+    humidity.innerText=result.data.main.humidity + '%';
 
 
 }

@@ -36,7 +36,7 @@ function handleSubmit(event){
 // }
 
 async function doAPICall(city){
-    let result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${ApiKey}&units=metric`)
+    let result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${ApiKey}&units=imperial`)
     console.log(result)
     // result=result.data.main.temp_min[0]
     // console.log(result)

@@ -51,7 +51,7 @@ async function doAPICall(city){
 
 
     let forecast1 = document.getElementById("forcasttitle");
-    forecast1.innerText="Forcast";
+    forecast1.innerText="Forecast";
 
     let forecast = document.getElementsByClassName("card-title3")[0];
     forecast.innerText=result.data.weather[0].description;

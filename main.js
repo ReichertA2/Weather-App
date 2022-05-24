@@ -18,7 +18,6 @@ async function doAPICall(city){
     console.log(result)
 
 
-   
     let img = document.createElement("img")
     img.src = "images/clouds.jpg";
     img.class = "card-img-overlay";
@@ -32,10 +31,6 @@ async function doAPICall(city){
     header.innerText=result.data.name;
 
    
- 
-
-
- 
     let high1 = document.getElementById("hightitle");
     high1.innerText="High" ;
 
@@ -64,14 +59,3 @@ async function doAPICall(city){
 }
 
 
-// function renderImage(){
-//     let image = document.getElementsByClassName('card')[0];
-//     let img = document.createElement("img")
-//     img.src = "images/clouds.jpg";
-//     img.class = "card-img img-fluid";
-//     img.alt = "...";
-//     image.appendChild(img);
-    
-// }
-
-// renderImage()
